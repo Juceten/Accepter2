@@ -7,13 +7,13 @@ class Accepter():
     def __init__(self):
         with open("app/settings.json", "r") as f:
             settings = json.load(f)
-        self.__r_buttons = ['app/resized-one.png', 'app/resized-two.png']
+        self.__r_buttons = ['app/assets/resized-one.png', 'app/assets/resized-two.png']
         self.__settings = settings
         self.__scale = {
-            '4:3' : [(1280,960) , ('app/f1.png','app/f2.png')],
-            '16:9' : [(3840, 2160) , ('app/s1.png','app/s2.png')],
-            '16:10' : [(1680,1050) , ('app/t1.png','app/t2.png')],
-            '5:4' : [(1280,1024) , ('app/b1.png','app/b2.png')]
+            '4:3' : [(1280,960) , ('app/assets/f1.png','app/assets/f2.png')],
+            '16:9' : [(3840, 2160) , ('app/assets/s1.png','app/assets/s2.png')],
+            '16:10' : [(1680,1050) , ('app/assets/t1.png','app/assets/t2.png')],
+            '5:4' : [(1280,1024) , ('app/assets/b1.png','app/assets/b2.png')]
         }
         self.__override_list=[1280,1360,1366,1600,1920,2715,3840]
         self.__resolution = []
@@ -56,7 +56,7 @@ class Accepter():
         time.sleep(1)
 
     def start(self):
-        logging.info(f'You can exit this script at any time by holding the \"{self.__settings["quit_key"]}\" key...')
+        logging.info(f'You can exit this script at any time by holding the "{self.__settings["quit_key"]}" key...')
         if self.__settings["close_on_accept"]:
             logging.info("This script will close automatically after accepting a match...")
         else:
