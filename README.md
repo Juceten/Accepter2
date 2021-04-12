@@ -3,7 +3,7 @@ Automatic match accepting script for counter strike global offensive.
 ## Info
 This has not been dested on all resolutions and has been confirmed to not function correctly on certain resolutions. Please report any bugs you find.
 ## Download
-[Windows](https://github.com/Juceten/Accepter2/raw/main/Accept2.zip)
+[Windows](https://github.com/Juceten/Accepter2/raw/main/Accepter2.zip)
 ## Install Instructions
 *Note: You must have python 3.3 or newer installed.*
 1. Download zip
