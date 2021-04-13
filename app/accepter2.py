@@ -15,7 +15,7 @@ class Accepter():
             '16:10' : [(1680,1050) , ('app/assets/t1.png','app/assets/t2.png')],
             '5:4' : [(1280,1024) , ('app/assets/b1.png','app/assets/b2.png')]
         }
-        self.__override_list=[1280,1360,1366,1600,1920,2715,3840]
+        self.__override_list=[[1280,720],[1360,768],[1366,768],[1600,900],[1920,1080],[2715,1527],[3840,2160]]
         self.__resolution = []
         self.__aspect_ratio = ""
         self.__prop = None
@@ -27,7 +27,7 @@ class Accepter():
                 gcd = math.gcd(resolution[0], resolution[1])
                 self.__resolution, self.__aspect_ratio = resolution, f"{int(resolution[0]/gcd)}:{int(resolution[1]/gcd)}"
                 logging.debug(f"real aspect:{self.__aspect_ratio}")
-                if resolution[0] in self.__override_list:
+                if resolution in self.__override_list and self.__aspect_ratio not in self.__scale.keys():
                     self.__aspect_ratio = "16:9"
                 elif self.__aspect_ratio not in self.__scale.keys():
                     self.__aspect_ratio = "16:10"
