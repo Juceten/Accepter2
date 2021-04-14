@@ -1,7 +1,7 @@
 # Accepter2
 Automatic match accepting script for counter strike global offensive.
 ## Info
-This has not been dested on all resolutions and has been confirmed to not function correctly on certain resolutions. Please report any bugs you find.
+This has not been tested on all resolutions and has been confirmed to not function correctly on certain resolutions. Please report any bugs you find.
 ## Download
 [Windows](https://github.com/Juceten/Accepter2/raw/main/Accepter2.zip)
 ## Install Instructions
