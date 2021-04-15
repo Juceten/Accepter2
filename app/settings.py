@@ -1,7 +1,7 @@
-import json, logging
+import json, logging, os
 
 def askUser():
-    fp="app/settings.json"
+    fp = os.path.join(os.path.dirname(os.path.realpath(__file__)), "settings.json")
     with open(fp, "r") as f:
         settings = json.load(f)
     logging.debug(settings)

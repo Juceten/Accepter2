@@ -1,19 +1,20 @@
 from PIL import Image
-import keyboard, pyautogui, time, math, logging, json
+import keyboard, pyautogui, time, math, logging, json, os
 
 class Accepter():
     __confidence = 0.7
-    
+    __fp = dir_path = os.path.dirname(os.path.realpath(__file__))
+
     def __init__(self):
-        with open("app/settings.json", "r") as f:
+        with open(os.path.join(self.__fp, "settings.json"), "r") as f:
             settings = json.load(f)
-        self.__r_buttons = ['app/assets/resized-one.png', 'app/assets/resized-two.png']
+        self.__r_buttons = [os.path.join(self.__fp, "assets", "resized-one.png"), os.path.join(self.__fp, "assets", "resized-two.png")]
         self.__settings = settings
         self.__scale = {
-            '4:3' : [(1280,960) , ('app/assets/f1.png','app/assets/f2.png')],
-            '16:9' : [(3840, 2160) , ('app/assets/s1.png','app/assets/s2.png')],
-            '16:10' : [(1680,1050) , ('app/assets/t1.png','app/assets/t2.png')],
-            '5:4' : [(1280,1024) , ('app/assets/b1.png','app/assets/b2.png')]
+            '4:3' : [(1280,960) , (os.path.join(self.__fp, "assets", 'f1.png'),os.path.join(self.__fp, "assets",'f2.png'))],
+            '16:9' : [(3840, 2160) , (os.path.join(self.__fp, "assets",'s1.png'),os.path.join(self.__fp, "assets",'s2.png'))],
+            '16:10' : [(1680,1050) , (os.path.join(self.__fp, "assets",'t1.png'),os.path.join(self.__fp, "assets",'t2.png'))],
+            '5:4' : [(1280,1024) , (os.path.join(self.__fp, "assets",'b1.png'),os.path.join(self.__fp, "assets",'.png'))]
         }
         self.__override_list=[[1280,720],[1360,768],[1366,768],[1600,900],[1920,1080],[2715,1527],[3840,2160]]
         self.__resolution = []
