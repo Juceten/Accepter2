@@ -5,7 +5,7 @@ This has not been tested on all resolutions and will not function correctly on a
 ## Download
 [Windows](https://github.com/Juceten/Accepter2/archive/refs/heads/main.zip)
 ## Install Instructions
-*Note: You must have python 3.3 or newer installed.*
+*Note: You must have python 3.6 or newer installed.*
 1. Download zip
 2. Move Accepter2-main.zip to the desired install location
 3. Extract zip
