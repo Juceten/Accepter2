@@ -14,7 +14,7 @@ class Accepter():
             '4:3' : [(1280,960) , (os.path.join(self.__fp, "assets", 'f1.png'),os.path.join(self.__fp, "assets",'f2.png'))],
             '16:9' : [(3840, 2160) , (os.path.join(self.__fp, "assets",'s1.png'),os.path.join(self.__fp, "assets",'s2.png'))],
             '16:10' : [(1680,1050) , (os.path.join(self.__fp, "assets",'t1.png'),os.path.join(self.__fp, "assets",'t2.png'))],
-            '5:4' : [(1280,1024) , (os.path.join(self.__fp, "assets",'b1.png'),os.path.join(self.__fp, "assets",'.png'))]
+            '5:4' : [(1280,1024) , (os.path.join(self.__fp, "assets",'b1.png'),os.path.join(self.__fp, "assets",'b2.png'))]
         }
         self.__override_list=[[1280,720],[1360,768],[1366,768],[1600,900],[1920,1080],[2715,1527],[3840,2160]]
         self.__resolution = []
